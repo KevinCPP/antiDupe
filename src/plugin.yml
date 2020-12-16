@@ -1,0 +1,23 @@
+main: antiDupe.Main
+name: Anti-Dupe
+version: pre-alpha
+author: KevinCPP
+api-version: 1.16
+
+commands:
+  addItem:
+    description: add an item to check inventories for
+    permission: antidupe.additem
+ 
+permissions:
+  antidupe.*:
+    description: Gives access to all antidupe commands
+    children:
+      antidupe.additem
+      antidupe.alert
+  antidupe.additem:
+    description: Allows you to add items to be checked for in inventories
+    default: op
+  antidupe.alert:
+    description: Anyone with this permission will get alerts when possible dupes are found
+    default: op
